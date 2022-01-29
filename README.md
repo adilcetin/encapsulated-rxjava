@@ -2,10 +2,6 @@
 Encapsulated Rxjava in Android : The classes and methods of the Android Rxjava library are encapsulated. New methods have been added in order to facilitate use and increase code readability.
 
 
-# encapsulated-rxjava
-Encapsulated Rxjava in Android : The classes and methods of the Android Rxjava library are encapsulated. New methods have been added in order to facilitate use and increase code readability.
-
-
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
@@ -22,7 +18,7 @@ Step 2. Add the dependency
   
   
   
-Sample Usage of EncObservable on Thread:
+# Sample Usage of EncObservable on Thread:
     EncObservable<String> encObservable = EncObservable.create(emitter -> { // doing something... });
     
     encObservable.subscribeOnIOThread(bool->{ // doing something... }, throwable -> {});
@@ -35,7 +31,7 @@ Sample Usage of EncObservable on Thread:
     
     
     
-Sample Usage of EncObservable run(create and subscribe) on Thread:
+# Sample Usage of EncObservable run(create and subscribe) on Thread:
  
     EncObservable.runOnIOThread(emitter -> { // doing something... }, throwable -> {});
     
@@ -68,7 +64,7 @@ Sample Usage of EncObservable run(create and subscribe) on Thread:
 
 
 
-Sample Usage of EncObservable Cycle and Timer:
+# Sample Usage of EncObservable Cycle and Timer:
     
     EncObservable.runCycleInMinutes(5, bool->{ // doing something... }, throwable -> {});
     
@@ -83,7 +79,7 @@ Sample Usage of EncObservable Cycle and Timer:
  
  
  
- Sample Usage of EncComplatable:
+ # Sample Usage of EncComplatable:
     
     EncCompletable encCompletable = EncCompletable.create(emitter -> { // doing something... });
     
@@ -118,7 +114,7 @@ Sample Usage of EncObservable Cycle and Timer:
 
 
 
- Sample Usage of EncSingle:
+ # Sample Usage of EncSingle:
     
     EncSingle<String> encSingle = EncSingle.create(emitter -> { // doing something... });
     
@@ -154,7 +150,7 @@ Sample Usage of EncObservable Cycle and Timer:
  
  
  
- Sample Usage of EncPublishSubject:
+ # Sample Usage of EncPublishSubject:
       
        EncPublishSubject<String> encPublishSubject = EncPublishSubject.create();
 
@@ -172,7 +168,7 @@ Sample Usage of EncObservable Cycle and Timer:
  
  
  
- Sample Usage of EncBehaviorSubject:
+ # Sample Usage of EncBehaviorSubject:
  
        EncBehaviorSubject<String> encBehaviorSubject = EncBehaviorSubject.create();
 
@@ -190,7 +186,7 @@ Sample Usage of EncObservable Cycle and Timer:
  
  
  
- Sample Usage of EncDisposable and EncCompositeDisposable:
+ # Sample Usage of EncDisposable and EncCompositeDisposable:
  
        EncDisposable encDisposable = EncSingle.runOnIOThread(singleOnClass);
        

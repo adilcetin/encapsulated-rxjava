@@ -15,6 +15,37 @@ Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.adilcetin:encapsulated-rxjava:0.1.0'
 	}
+	
+# Method Definitions
+
+	runOnIOThread: 		Method creates and subscribes (on IO thread) to given source.
+     			It is recommended to use it when you want to do any operation outside of the main thread.
+				subscribeOn : IO Thread
+     			observeON : IO Thread
+	
+	runOnMainThread: 	Method creates and subscribes (on Main thread) to given source. 
+				subscribeOn : Main Thread
+     			observeON : Main Thread
+				
+	runOnNewThread: 	Method creates and subscribes (on New thread) to given source. 
+				subscribeOn : New Thread
+     			observeON : New Thread
+				
+	runOnIOToMainThread: 	Method creates creates and subscribes (on IO thread) to given source.
+				subscribeOn : IO Thread
+     			observeON : Main Thread
+				
+	runOnNewToMainThread: 	Method creates and subscribes (on New thread) to given source.
+				subscribeOn : New Thread
+     			observeON : Main Thread
+			
+	runCycle: 		Method creates interval in seconds and subscribes it
+				subscribeOn : Single Thread
+     			observeOn : Single Thread
+			
+	runTimer: 		Method creates timer in minutes and subscribes it
+			     	subscribeOn : IO Thread
+			
   
   
   
